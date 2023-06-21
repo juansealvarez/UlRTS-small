@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Trabajador
   speed: 2
   awakeRange: 2
+  prefab: {fileID: 6619449706374540573, guid: 6d2de8079786d4a4f8dd147513ed9974, type: 3}
+  sprite: {fileID: 21300000, guid: 6be29d435b384404c89e3929a96177f8, type: 3}
