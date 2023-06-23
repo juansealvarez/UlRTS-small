@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,31 @@ public class UnitBarItemUI : MonoBehaviour
     private void Awake() {
         mButtonClick = GetComponent<Button>();
     }
+
+    private void Start()
+    {
+        UnitInputCrontroller.Instance.OnCancelSelection += UnitBarItemUI_OnCancelSelection;
+    }
+
+    private void UnitBarItemUI_OnCancelSelection()
+    {
+        DeSelect();
+    }
+
     public void Init(Sprite sprite, UnityAction onClickListener)
     {
         //Inicializar el GO
         image.sprite = sprite;
         mButtonClick.onClick.AddListener(onClickListener);
+    }
+
+    public void Select()
+    {
+        GetComponent<Image>().color = Color.red;
+    }
+
+    public void DeSelect()
+    {
+        GetComponent<Image>().color = Color.white;
     }
 }

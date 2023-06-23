@@ -50,4 +50,12 @@ public class UnitManager : MonoBehaviour
             Instantiate(mSelectedUnitToSpawn.prefab, position, Quaternion.identity);
         }
     }
+
+    public void MoveUnits(Vector3 position)
+    {
+        foreach (var unit in mSelectedUnits)
+        {
+            unit.Move(position);
+        }
+    }
 }
