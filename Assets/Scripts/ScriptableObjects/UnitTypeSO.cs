@@ -10,4 +10,5 @@ public class UnitTypeSO : ScriptableObject
     public float awakeRange;
     public Transform prefab;
     public Sprite sprite;
+    public float coolDownTime;
 }

@@ -8,7 +8,16 @@ public class Unit : MonoBehaviour
     private GameObject selected;
     [SerializeField]
     private UnitTypeSO unitType;
+
+    private MoveAction mMoveAction;
+    private CollectAction mCollectAction;
     public bool Selected { private set; get; } = false;
+
+    private void Awake()
+    {
+        mMoveAction = GetComponent<MoveAction>();
+        mCollectAction = GetComponent<CollectAction>();
+    }
 
     public void Select()
     {
@@ -20,6 +29,7 @@ public class Unit : MonoBehaviour
     {
         if (TryGetComponent<MoveAction>(out MoveAction moveAction))
         {
+            mMoveAction.IsActive = true;
             moveAction.Move(position);
         }
     }
@@ -27,5 +37,15 @@ public class Unit : MonoBehaviour
     public UnitTypeSO GetUnitTypeSO()
     {
         return unitType;
+    }
+
+    public void Collect(Resource resource)
+    {
+        if (mCollectAction != null)
+        {
+            mCollectAction.resource = resource;
+            mMoveAction.IsActive = false;
+            mCollectAction.IsActive = true;
+        }
     }
 }

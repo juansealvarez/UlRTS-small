@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 914700528876358251}
   - component: {fileID: 914700528876358250}
-  m_Layer: 0
+  - component: {fileID: 1083249498318846288}
+  m_Layer: 6
   m_Name: PF_Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +49,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dcd42a81ee2d214c82b754e305cd25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceType: {fileID: 11400000, guid: cf2767d25d4e26949951ddf09deca4e3, type: 2}
+--- !u!65 &1083249498318846288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914700528876358249}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6, z: 5}
+  m_Center: {x: 1.76, y: 2.98, z: 1.74}
 --- !u!1001 &914700527234619825
 PrefabInstance:
   m_ObjectHideFlags: 0

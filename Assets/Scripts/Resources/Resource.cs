@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Resource : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private ResourceTypeSO resourceType;
+
+    private int mCurrentAmount;
+
+    private void Awake()
     {
-        
+        mCurrentAmount = resourceType.maxAmount;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FarmResource(int quantity)
     {
+        if (mCurrentAmount > 0)
+        {
+            mCurrentAmount -= quantity;
+        }else
+        {
+            Destroy(gameObject);
+        }
         
     }
 }
