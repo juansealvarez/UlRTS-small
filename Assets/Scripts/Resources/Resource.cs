@@ -19,6 +19,7 @@ public class Resource : MonoBehaviour
         if (mCurrentAmount > 0)
         {
             mCurrentAmount -= quantity;
+            ResourceManager.Instance.AddResourceAmount(resourceType, quantity);
         }else
         {
             Destroy(gameObject);

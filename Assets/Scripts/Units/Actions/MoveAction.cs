@@ -26,7 +26,7 @@ public class MoveAction : MonoBehaviour
     {
         if (IsActive)
         {
-            if (IsResourceNear(out Resource resource))
+            if (mUnit.GetComponent<CollectAction>() != null && IsResourceNear(out Resource resource))
             {
                 
                 mAgent.isStopped = true;
