@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6619449706374540770}
   - component: {fileID: 2637862653003519521}
   - component: {fileID: 866959724717410776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PF_Worker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 0
+  AmountToCollect: 1
 --- !u!1 &6619449706659872733
 GameObject:
   m_ObjectHideFlags: 0
